@@ -7,3 +7,7 @@ module.exports.findFarmerRepository = async (check) => {
 module.exports.createFarmerRepository = async (farmerData) => {
     return await Farmer.create(farmerData)
 }
+
+module.exports.getAllFarmersRepository = async (key) => {
+    return await Farmer.find().populate(key)
+}
